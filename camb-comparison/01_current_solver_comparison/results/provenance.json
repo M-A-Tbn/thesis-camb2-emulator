@@ -761,7 +761,7 @@
     "raw/flat/class/z200/repeat2/pk.dat": "f5075622ea4b8a74e61145dfffca0c60b5958a4ccaab5b3c2ab8010ab02a86a2",
     "raw/flat/class/z200/repeat2/tk.dat": "b9cd916470eb652d8719628025f9ca968653d0687574331fd5a07d44919677e2",
     "raw/flat/class/z200/repeat2/unused_parameters": "84563827efb9896153a5736fb85b5694eeada3cce3bb15ccc411dd1c5f187e47",
-    "results/Report.md": "2681b18ad0f13a736dac5833c9e8db5789a46a67d3f68636a06e60ba82f7ca88",
+    "results/Report.md": "12e02bc77aa299e20946185bc8ed5b94a86012579c5625b86a9087cf99dea709",
     "results/audit.json": "d81ad51da5947ae167bc1f52dc1ea771b5c4c35fa2fa8a7d5519fbec052808fc",
     "results/curved.npz": "f11e26ed4da7418942ec00d2504c8bf34dfa74ce1c29829f61d2e35d3f88f264",
     "results/evolving_de.npz": "ef7ba8505624aa3daba095d73b189125dd1962df8c8df2d3f7df37dd936b6059",
@@ -773,7 +773,7 @@
     "results/figures/03_matter_power_curved_lcdm.svg": "807ae6d6d2f4a647126d3de7dd48f3be7b849ffb514f73d1e21b77e71536af4b",
     "results/figures/04_matter_power_evolving_dark_energy.png": "3b335ca97e213c330e5250037fb8d8a6301ac9057e2bd0f91fe7319c48424454",
     "results/figures/04_matter_power_evolving_dark_energy.svg": "d617a83b5b748597f1e1eadbd8091b6e7c765d213b78029a0d26b6eb5a35fd02",
-    "results/figures/README.md": "c5d15148a0c620de0ffef4ddd16ddc3970640af06d91c9912700b0b99c0ab9e5",
+    "results/figures/README.md": "cb373153caf799995efc530d4f844e5ebeab06acc2c899e468fc5f616fa054b5",
     "results/flat.npz": "80bd2c17e5af358470c039c6b3797e0e639aebbb90ef2d34c30d7dd814895319",
     "results/statistics.json": "e1d7d5d0bb6eb84860e62b84388bbdb2c6d7476b6ed9a9344d67ede7eb460b28"
   },
@@ -781,5 +781,15 @@
     "date": "2026-10-29",
     "original_report_sha256": "1b782fe31f471f6c7efa01bcfad70acbdb4f15b3a445294b0f0c3a91e948f6a4",
     "reason": "Editorial revision for research review. Numerical tables, comparison arrays, figures and scientific checks are unchanged. The original report is retained in the local recovery copy."
-  }
+  },
+  "editorial_revisions": [
+    {
+      "date": "2026-10-29",
+      "previous_sha256": {
+        "results/Report.md": "2681b18ad0f13a736dac5833c9e8db5789a46a67d3f68636a06e60ba82f7ca88",
+        "results/figures/README.md": "c5d15148a0c620de0ffef4ddd16ddc3970640af06d91c9912700b0b99c0ab9e5"
+      },
+      "reason": "Revised the report and figure guide for a more direct, natural writing style. Numerical tables, arrays, figures and scientific checks are unchanged."
+    }
+  ]
 }

@@ -1,45 +1,71 @@
-# Three thesis-informed cosmologies: comparison across nine redshifts
+# Comparing CAMB and CAMB2 with CLASS from z=0 to z=2
 
-## Purpose and scope
+Before moving on to the emulator, I wanted to see how closely CAMB 1.6.6 and
+CAMB 2.0.4 agree with CLASS 3.1.0 when they receive the same cosmological inputs.
+I started with three models at z=0, then extended the comparison to nine
+redshifts between z=0 and z=2.
 
-Our question is: **when we describe the same universe to CAMB 1.6.6, CAMB 2.0.4 and CLASS 3.1.0, how closely do their predictions agree?**
+**CAMB2 has smaller maximum and RMS differences from CLASS in all 27 tested
+model–redshift combinations**, within 0.02 < k < 0.3 Mpc^-1. This is a result
+about agreement with CLASS. It does not establish which solver is closest to
+an exact solution.
 
-These programs are called *solvers* because they solve equations describing how the universe and its small density fluctuations evolve. Here we ask each solver for the linear matter power spectrum, P(k). This describes the strength of matter-density fluctuations at different spatial scales.
+## What I compared
 
-“Linear” means that we use equations that treat the fluctuations as small. We compare those linear predictions even on scales where real matter clustering today would require a more complicated, nonlinear calculation.
+The comparison uses the linear matter power spectrum, P(k), which describes
+the strength of matter-density fluctuations at different spatial scales.
+Linear theory treats those fluctuations as small. The calculations use this
+approximation throughout, including on scales where real clustering would
+require nonlinear physics.
 
-We test three examples: a flat universe with a cosmological constant, a curved universe with a cosmological constant, and a flat universe whose dark energy changes with time. These are the three types of model shown in Emmanuel’s Figure 4.3 (printed page 62, PDF page 67).
+I used three models based on the examples in Emmanuel's Figure 4.3: a flat
+universe with a cosmological constant, a curved universe with a cosmological
+constant, and a flat universe with evolving dark energy. His figure compares
+an emulator with CAMB; this work compares the solvers themselves. I have not
+yet reproduced or trained the emulator.
 
-There is an important difference between his figure and ours. **Emmanuel compares his emulator with CAMB. We compare three solvers with one another.** We have not yet tested or trained an emulator in this experiment.
+The settings come from the thesis where they are documented. Where the exact
+inputs are missing, I have recorded the choices made here in the
+[source audit](../../02_shared_inputs_and_z0_reference/Source%20audit.md).
+The comparison therefore follows his examples, but is not an exact reproduction.
 
-We call our settings *thesis-informed*: we use his documented values where available and record our choices where his exact settings are missing. This is not an exact reproduction of his figure.
-
-We have extended the same experiment rather than started a separate project. The earlier z=0 results are preserved and checked against a backup. We added eight earlier epochs for each model, with three fresh runs per solver and epoch. This gives 27 model–redshift combinations and 81 distinct spectra. There are 216 new solver runs, plus the 27 runs already completed at z=0.
+The original z=0 results were kept and checked against a backup. Adding eight
+redshifts for each model required **216 new solver runs**, with three repeats
+per solver and case, in addition to the 27 runs already completed at z=0.
+Together, these give 27 model–redshift combinations and 81 distinct spectra.
 
 ## Inputs and method
 
-### What stays the same?
+### Common inputs
 
-We keep the ordinary-matter density, cold-dark-matter density, present expansion rate and initial fluctuation settings the same across the three examples. Within each example, all three solvers receive the same stated physical inputs.
+To make the comparison useful, each solver needs to calculate the same
+physical quantity for the same cosmology. I kept the matter densities,
+present expansion rate and primordial fluctuation settings fixed across
+the three models, and gave all three solvers the same stated inputs within
+each model.
 
-We now compare **nine redshifts: z=0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 and 2**. Redshift tells us which stage of the universe's history we are looking at: z=0 is today, and larger z means earlier times. Changing redshift does not create a different cosmology; it asks for that cosmology's prediction at another time. All cases have **zero massive neutrinos**. Massless neutrinos still contribute radiation; “no massive neutrinos” does not mean we removed all neutrinos.
+The comparison now covers **z=0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 and 2**.
+Here z=0 is today, and higher redshift means an earlier time in the same
+cosmology. These redshifts are listed in Emmanuel's Chapter 5, Tables 5.1–5.3.
+Combining them with the three Figure 4.3 models is the test design used here.
 
-For reference, the shared inputs are:
+All cases have zero massive neutrinos. Massless neutrinos still contribute
+to the radiation density. The common inputs are:
 
 - **H0=67.36 km/s/Mpc:** the present expansion rate.
-- **omega_b=0.0224 and omega_cdm=0.120:** measures of the ordinary-matter and cold-dark-matter densities. These are the physical-density parameters omega=Omega × h², where h=H0/100.
-- **As=2.1e-9 and ns=0.9649:** the initial strength of primordial curvature fluctuations and how that strength varies with scale.
-- **tau=0.0544:** the optical depth associated with reionization, describing the chance that a CMB photon scatters during that later period.
-- **TCMB=2.7255 K, Neff=3.044 and YHe=0.245:** the CMB temperature, the effective number describing neutrino radiation here, and the helium mass fraction.
-- **pivot=0.05 Mpc^-1:** the reference wavenumber at which the primordial amplitude and tilt are specified.
+- **omega_b=0.0224 and omega_cdm=0.120:** the physical baryon and cold-dark-matter
+  densities, where omega=Omega × h² and h=H0/100.
+- **As=2.1e-9 and ns=0.9649:** the primordial fluctuation amplitude and spectral tilt.
+- **tau=0.0544:** the optical depth associated with reionization.
+- **TCMB=2.7255 K, Neff=3.044 and YHe=0.245:** the CMB temperature, effective
+  number describing neutrino radiation, and helium mass fraction.
+- **pivot=0.05 Mpc^-1:** the reference scale for the primordial amplitude and tilt.
 
-These inputs are explicitly recorded so the comparison can be repeated. The [baseline source audit](../../02_shared_inputs_and_z0_reference/Source%20audit.md) distinguishes the values documented in the thesis from our own choices.
+### Changes between the models
 
-### What do we change?
-
-Omega_k describes spatial curvature. It is different from the wavenumber k on the plots.
-
-The parameters w0 and wa describe dark energy: w0 is its equation-of-state value today, and wa controls its evolution. The equation of state relates dark energy’s pressure to its energy density. A cosmological constant has w=-1 at all times.
+The curved model changes Omega_k, the spatial curvature parameter. The
+evolving-dark-energy model changes w0 and wa, which describe the relation
+between dark energy's pressure and density and how it changes with time.
 
 | Model | Omega_k | w0 | wa |
 |---|---:|---:|---:|
@@ -47,87 +73,81 @@ The parameters w0 and wa describe dark energy: w0 is its equation-of-state value
 | Curved LambdaCDM | 0.01 | -1 | 0 |
 | Evolving dark energy | 0 | -0.99 | -0.02 |
 
-For the curved example, we change Omega_k from 0 to 0.01. For the evolving-dark-energy example, we keep space flat and change w0 and wa.
+For evolving dark energy, I used w(a)=w0+wa(1-a), where a is the scale factor
+and equals 1 today. With these values, w crosses -1 at a=0.5, or z=1. CAMB
+and CLASS both use PPF, a treatment of dark-energy perturbations that handles
+this crossing. The settings are CAMB PPF and CLASS use_ppf=yes, with cs2=1
+and c_gamma/c_s=0.4. CLASS calls the time-dependence option CLP; it is the
+CPL form written above. Its separate cosmological-constant component is set
+to zero for this model, with the evolving component supplying the dark-energy
+density. The saved CLASS history of w and present-day densities was checked.
 
-The redshifts are those listed in Emmanuel's Chapter 5, Tables 5.1–5.3. Combining them with these Figure-4.3-inspired examples is our comparison design. It is not an exact repetition of one experiment from his thesis.
+The present dark-energy density is calculated from the expansion equation.
+When curvature changes while H0 and the matter densities stay fixed, the
+dark-energy density adjusts accordingly.
 
-The present dark-energy density is calculated so the model’s matter, radiation, dark energy and curvature satisfy the expansion equation. Therefore, when we introduce curvature while keeping H0 and the matter densities fixed, the dark-energy density adjusts. We do not hold every density fraction fixed independently.
+### Matching the outputs
 
-### How do we handle evolving dark energy?
+I matched the units and the definition of matter fluctuations before comparing
+the spectra. The matter spectrum here includes baryons and cold dark matter.
+CAMB and CLASS can express their density fluctuations using different
+coordinate conventions, called gauges, so their outputs need to be matched.
 
-We use the time dependence w(a)=w0+wa(1-a), where the scale factor a equals 1 today and was smaller in the past.
+I used CLASS's component outputs to reconstruct the same synchronous-gauge
+matter quantity used by CAMB. As a consistency check, those components were
+also combined using CLASS's original convention to recover its own power
+spectrum. At earlier redshifts, this check uses the expansion rate at that
+epoch. This tests the conversion and normalization.
 
-For our chosen values, w passes through -1 at a=0.5, corresponding to z=1. The solvers calculate the evolution of the fluctuations through the relevant history, including this crossing when it lies before the requested output time.
+CLASS is called through CosmoBolognaLib's Table_PkCodes interface, which
+returns its original output table. I kept CLASS's native k points and asked
+CAMB for its predictions at those points. This avoids the extra interpolation
+in CBL's higher-level Pk_matter method. CAMB still uses its own interpolation
+to return values at the requested points. No sigma8 rescaling was applied;
+sigma8 is a measure of the fluctuation amplitude.
 
-Both solvers use a treatment called **PPF**, which handles dark-energy perturbations through this crossing. Matching that choice helps avoid comparing two different treatments without realizing it.
+### Scales and solver settings
 
-For technical reference, we use CAMB PPF and CLASS use_ppf=yes, with cs2=1 and c_gamma/c_s=0.4. CLASS calls the time-dependence option CLP; it is the CPL form written above. In this case we set its separate cosmological-constant component to zero and let its evolving dark-energy component supply the required density. We checked the saved CLASS history of w and the present-day densities.
+The wavenumber k labels spatial scale: larger k corresponds to smaller scales.
+The saved comparison covers **1e-4 <= k <= 1 Mpc^-1**, with both solvers asked
+to calculate through k=2 Mpc^-1.
 
-### How do we make the outputs comparable?
+The main figure uses **0.02 < k < 0.3 Mpc^-1**, the interval used in the earlier
+comparisons. This is only part of Emmanuel's k range. Using linear predictions
+here does not mean that all these scales can be treated linearly in observations.
 
-**First, we use the same units and the same definition of matter fluctuations.**
+Each solver keeps its native numerical settings and recombination treatment.
+Recombination is the early period when electrons and nuclei formed neutral
+atoms, and its treatment can affect P(k). The differences measured here
+therefore include these choices as well as numerical effects.
 
-Our matter spectrum includes ordinary matter plus cold dark matter. CAMB and CLASS can describe density fluctuations using different coordinate conventions, called *gauges*. Comparing different conventions directly could create a difference that is not the solver difference we want to study.
+## What I found
 
-We therefore use CLASS’s saved component outputs to construct the same synchronous-gauge matter quantity used by CAMB. We also checked that those component outputs recover CLASS’s own original spectrum when combined according to its original convention. This checks the conversion and normalization; it is not a test of absolute physical accuracy. At each redshift, the check uses the expansion rate at that epoch rather than incorrectly reusing today's expansion rate.
+At each sampled scale, I calculated:
 
-**Second, we compare at the same k values.**
+**Difference (%) = 100 × (P_CAMB / P_CLASS − 1).**
 
-CosmoBolognaLib (CBL) launches CLASS and retrieves its original table through a method called Table_PkCodes. We do not use the higher-level Pk_matter method that adds CBL’s interpolation. We also do not rescale the spectrum afterward to match a chosen sigma8, a measure of fluctuation amplitude.
+Positive values mean CAMB predicts more power than CLASS; negative values
+mean less. I summarize the differences with the largest absolute value and
+RMS, or root mean square. RMS squares the differences before averaging and
+taking the square root, so positive and negative values do not cancel.
+Both quantities are percentages, not uncertainty estimates.
 
-We keep CLASS’s original output points and ask CAMB for its predictions at those same points. CAMB uses its own interpolation to return those values. Thus we avoid *CBL’s additional interpolation*, not all interpolation inside the calculations.
+### Agreement across redshifts
 
-### Which scales do we compare?
+Each column below is a cosmology. The top row shows the largest sampled
+difference in the chosen k interval, and the bottom row shows RMS. Orange
+is CAMB 1.6.6 and teal is CAMB 2.0.4. Each point is one calculated redshift;
+the connecting lines are guides to the eye.
 
-The wavenumber k labels spatial scale: smaller k means larger spatial scales, and larger k means smaller spatial scales.
+![Agreement with CLASS for the three models](figures/01_solver_agreement_by_redshift.png)
 
-We compare saved points within **1e-4 <= k <= 1 Mpc^-1**. Both solvers are asked to calculate through k=2 Mpc^-1, beyond the upper end of the comparison.
+**CAMB2 stays closer to CLASS by both measures at every redshift tested.**
+The differences change relatively little between z=0 and z=2, so the pattern
+seen at z=0 also holds at the earlier times sampled here.
 
-We also report a smaller **focus interval, 0.02 < k < 0.3 Mpc^-1**, which continues the interval used in our earlier comparisons. The main figure summarizes disagreements within this interval at each redshift. It is not the full range covered by Emmanuel’s thesis or a claim that all these scales can be treated linearly in observations.
-
-We retain each solver’s native numerical settings and recombination treatment. Recombination is the early period when electrons and nuclei formed neutral atoms; its treatment can affect the predicted spectrum. Since these treatments differ between solvers and versions, this experiment measures their practical prediction differences, not only numerical calculation errors.
-
-## Results: how agreement changes with redshift
-
-Our new question is: **does the agreement we found today remain similar at earlier times?**
-
-At each scale we calculate: **Difference (%) = 100 × (P_CAMB / P_CLASS − 1).** CLASS is the comparison reference, not a known exact answer. A positive value means CAMB predicts more power; a negative value means less.
-
-We summarize these differences in two ways. The **maximum** is the largest absolute difference among the points checked. **RMS** measures the overall size of the differences: square them, average them, then take the square root, so positive and negative values do not cancel. Both are percentages, not uncertainties.
-
-### The main figure
-
-Each column is one cosmology. The horizontal axis is now **redshift**, not k. The upper row shows the largest sampled disagreement inside our focus interval; the lower row shows RMS disagreement in the same interval. Orange is CAMB 1.6.6 and teal is CAMB 2.0.4. Each dot summarizes one redshift; connecting lines are visual guides, not extra calculations.
-
-A lower value means closer agreement with CLASS. This figure summarizes the comparison; it does not show the power spectra themselves. All spectra remain saved in the same numerical results files.
-
-![Three models](figures/01_solver_agreement_by_redshift.png)
-
-### The actual P(k) spectra
-
-The summary above tells us how far apart the predictions are. The next figures show **what the solvers actually predict**: the strength of matter fluctuations at each scale. There is one figure per cosmology and one panel per redshift, so all 27 cases are shown. Every panel contains the three solver predictions, using the same matched matter definition as the comparison.
-
-Read left to right, then move down to the next row. The horizontal axis is **k**, not redshift: larger k means smaller spatial scales. The vertical axis is **P(k, z)** in Mpc³. Both axes are logarithmic, meaning equal distances represent equal multiplication factors rather than equal additions. All panels and figures use the same axis ranges, so their heights can be compared directly. The grey band marks our focus interval, not an uncertainty band.
-
-The curves almost overlap because their differences are small compared with the range shown. Grey solid is CLASS, orange dashed is CAMB 1.6.6 and teal dotted is CAMB 2.0.4. An almost single-looking curve does not mean a solver is missing or the predictions are identical. Use the disagreement summary and tables for the small numerical differences. The lines join the saved comparison points; we have not run extra k values to draw them.
-
-Within each cosmology, the spectrum is generally lower at higher redshift. Our physical interpretation is that matter fluctuations have had less time to grow at those earlier epochs. This is a statement about the evolution of the predicted power, not about solver error. The plots remain linear-theory predictions, including on scales where a description of real clustering would require nonlinear physics.
-
-#### Flat LambdaCDM spectra
-
-![Flat LambdaCDM power spectra at nine redshifts](figures/02_matter_power_flat_lcdm.png)
-
-#### Curved LambdaCDM spectra
-
-![Curved LambdaCDM power spectra at nine redshifts](figures/03_matter_power_curved_lcdm.png)
-
-#### Evolving-dark-energy spectra
-
-![Evolving-dark-energy power spectra at nine redshifts](figures/04_matter_power_evolving_dark_energy.png)
-
-### Largest focus-interval differences across all nine redshifts
-
-For each solver and model, the next table finds the largest sampled difference across both k and the nine redshifts. The redshift columns tell us when that largest disagreement occurs. The two versions can reach their maxima at different times and scales.
+These are the largest differences in 0.02 < k < 0.3 Mpc^-1 across all nine
+redshifts. All six occur at z=2.
 
 | Model | CAMB 1.6.6 maximum | z at maximum | CAMB 2.0.4 maximum | z at maximum |
 |---|---:|---:|---:|---:|
@@ -135,9 +155,40 @@ For each solver and model, the next table finds the largest sampled difference a
 | Curved LambdaCDM | 0.159183% | 2 | 0.065888% | 2 |
 | Evolving dark energy | 0.140659% | 2 | 0.068325% | 2 |
 
-### Results at each redshift
+### The power spectra
 
-These tables let you read the figure's values directly. For example, a difference of 0.10% means one tenth of one percent, not ten percent. The z=0 rows are unchanged from the earlier report. Maxima refer to 0.02 < k < 0.3 Mpc^-1.
+The next plots show P(k) itself, with one panel per redshift. Grey solid is
+CLASS, orange dashed is CAMB 1.6.6, and teal dotted is CAMB 2.0.4. All panels
+use the same axis ranges. The horizontal axis is k in Mpc^-1 and the vertical
+axis is P(k, z) in Mpc³; both are logarithmic. The grey band marks the k
+interval used in the main comparison.
+
+The three curves nearly overlap because their differences are small compared
+with the range of P(k) shown. The disagreement figure above is better suited
+to seeing those small differences. Lines join the saved points; no extra k
+values were calculated for these plots.
+
+Within each model, the power is generally lower at higher redshift. This is
+consistent with matter fluctuations having had less time to grow. It describes
+the evolution of the spectrum, rather than a change in solver error.
+
+#### Flat LambdaCDM
+
+![Flat LambdaCDM power spectra at nine redshifts](figures/02_matter_power_flat_lcdm.png)
+
+#### Curved LambdaCDM
+
+![Curved LambdaCDM power spectra at nine redshifts](figures/03_matter_power_curved_lcdm.png)
+
+#### Evolving dark energy
+
+![Evolving-dark-energy power spectra at nine redshifts](figures/04_matter_power_evolving_dark_energy.png)
+
+### Values at each redshift
+
+The tables below give the values behind the main figure. All maxima and RMS
+values refer to 0.02 < k < 0.3 Mpc^-1. The z=0 rows are unchanged from the
+previous comparison.
 
 #### Flat LambdaCDM
 
@@ -181,9 +232,11 @@ These tables let you read the figure's values directly. For example, a differenc
 | 1.75 | 63 | 0.139772% | 0.067420% | 0.036520% | 0.029368% |
 | 2 | 63 | 0.140659% | 0.068325% | 0.036590% | 0.029376% |
 
-## Full sampled range
+### Full sampled k range
 
-The following table includes all checked points in 1e-4 <= k <= 1 Mpc^-1, and all nine redshifts. It therefore answers a broader question than the focus-interval tables. Each k is in Mpc^-1.
+Including all sampled points in 1e-4 <= k <= 1 Mpc^-1 gives the following
+maxima. The k values are in Mpc^-1. For curved LambdaCDM, CAMB2's largest
+difference over this wider range occurs at z=0, outside the narrower interval.
 
 | Model | CAMB 1.6.6 maximum | z | k | CAMB 2.0.4 maximum | z | k |
 |---|---:|---:|---:|---:|---:|---:|
@@ -191,54 +244,56 @@ The following table includes all checked points in 1e-4 <= k <= 1 Mpc^-1, and al
 | Curved LambdaCDM | 0.159183% | 2 | 0.038894 | 0.066727% | 0 | 0.00936425 |
 | Evolving dark energy | 0.140659% | 2 | 0.0383188 | 0.068325% | 2 | 0.0383188 |
 
-## Interpretation
+## Checks and remaining limits
 
-CAMB2 has the smaller focus-interval maximum in **27 of 27** model–redshift combinations. It has the smaller focus-interval RMS in **27 of 27** combinations.
+The checks covered the inputs actually read by the solvers, units, matter
+definitions, background densities, spectrum reconstruction and saved file
+fingerprints. All repeated spectra matched exactly, and all original z=0
+arrays and statistics were recovered unchanged.
 
-This tells us whether the earlier z=0 pattern persists at the other epochs. It does not mean CAMB2 is closer at every individual k. Differences in the summaries can also reflect which k points the solvers sample, not just changes in the physical model.
+This shows that the calculation is repeatable. **A convergence test is still
+needed:** repeating the same settings does not tell us whether the result
+stays stable when numerical precision is increased.
 
-The result is evidence about agreement between these implementations, at these settings. It is not proof that CLASS is exact, or that one CAMB version is universally more accurate. The solvers keep different native recombination prescriptions, so we have not isolated pure numerical error.
+One small consistency difference appeared at the added redshifts. Reconstructing
+CLASS's original power from its component fluctuations differs from the directly
+returned power by up to **0.000192%**. The earlier-redshift check allows
+**0.001%**, while the tighter z=0 check is unchanged.
 
-For the thesis, we now have a systematic check across three representative models and nine times in their evolution. It is still preliminary solver validation, not emulator validation or complete coverage of Emmanuel's parameter and scale ranges.
+CLASS interpolates power and component fluctuations separately in time.
+Squaring an interpolated fluctuation need not give exactly the same result as
+interpolating its power. The relevant paths were checked in fourier.c
+(fourier_pk_at_z) and perturbations.c (perturbations_sources_at_tau). The small
+mismatch is consistent with those separate output paths, though it is not a
+measurement of CLASS's physical error. The comparison consistently uses the
+reconstructed synchronous matter power. The 0.001% threshold is a diagnostic
+choice, not a claimed solver accuracy.
 
-## Verification and limits
+The main result should be read within the following limits:
 
-### What did we check?
+- CLASS is the comparison reference, not an exact solution. Closer agreement
+  does not by itself show greater absolute accuracy.
+- The maximum and RMS are smaller for CAMB2 in all 27 cases, but CAMB2 need
+  not be closer at every individual k. The native recombination choices also
+  differ, so pure numerical error has not been isolated.
+- Maxima apply to the sampled points. Larger differences could lie between
+  them, and the k grids vary slightly between models. RMS gives equal weight
+  to each saved point; those points are not evenly spaced in log k.
+- Three models and nine redshifts do not cover Emmanuel's full parameter or
+  scale range. Emulator validation, effects on inferred parameters, and a
+  fair runtime comparison remain outside this experiment. The cause of every
+  feature in the differences has not yet been identified.
 
-We checked that the intended inputs were actually read, that the units and density definitions matched, and that the saved CLASS table was retrieved without CBL’s additional interpolation. We also checked the background densities, the reconstruction of the power spectrum from component outputs, and the records identifying the files and solver versions.
+## Saved data
 
-Each new solver/model/redshift combination was run three times, and its saved spectra were identical across repeats. The expanded analysis also reproduces every original z=0 array and statistic exactly. This shows **repeatability**: the same setup gives the same answer.
+The comparison arrays are available for the [flat](flat.npz),
+[curved](curved.npz), and [evolving-dark-energy](evolving_de.npz) models.
+They contain the redshifts and spectra at matched CLASS points. Keys without
+a redshift suffix refer to z=0; for example, k_z025 and class_z025 refer to
+z=0.25.
 
-It does not show **convergence**. A convergence test asks whether the answer remains stable when numerical settings are made more demanding. We did not perform that test in this experiment.
-
-One small detail matters when checking the earlier epochs. CLASS can provide the power directly, or we can reconstruct it from its component fluctuations. These two routes agree to nearly rounding precision at z=0, but differ by up to **0.000192%** at the added redshifts, measured across the native output points. Our earlier-epoch consistency check allows up to **0.001%**; the original, much tighter z=0 check is unchanged. This threshold is a diagnostic choice, not a claimed accuracy of CLASS.
-
-Why can the two routes differ slightly? Inside CLASS, the power and the component fluctuations are interpolated separately in time. Interpolation means estimating an output between computed time steps. Interpolating a fluctuation and then squaring it need not give exactly the same answer as interpolating its power directly. We verified these separate paths in CLASS's fourier.c (fourier_pk_at_z) and perturbations.c (perturbations_sources_at_tau). Our interpretation is that this tiny mismatch is consistent with those different output paths; it is not a measurement of the solver's physical error. The main comparison consistently uses the reconstructed synchronous matter power.
-
-The detailed check results are in [audit.json](audit.json). Exact numerical differences, including their signs and locations, are in [statistics.json](statistics.json). These provide the unrounded results and detailed verification records.
-
-### Scope of the conclusions
-
-We checked a finite set of k values, so a larger difference could exist between them. CLASS also chooses slightly different points for different cosmologies. Therefore, the reported maxima are the largest differences *at the points we checked*, not guaranteed bounds over every possible k.
-
-RMS gives equal weight to each saved point. Those points are not evenly spaced in log k, so this RMS is not the same statistic as one calculated on an evenly spaced logarithmic grid.
-
-We have not tested every cosmology in Emmanuel’s training range, redshifts outside the nine listed here, or his full k range. We have not trained an emulator, run an MCMC inference analysis, or shown how these differences would affect parameter estimates.
-
-We also have not identified the cause of every feature in the difference plots. This experiment does not support a three-solver speed ranking, because we did not perform a fair timing comparison here.
-
-## Data and reproducibility
-
-The numerical comparison arrays are supplied for the [flat](flat.npz),
-[curved](curved.npz), and [evolving-dark-energy](evolving_de.npz) cases.
-Each contains the nine redshifts and spectra at matched native CLASS points.
-The original keys refer to z=0; keys such as k_z025 and class_z025 identify
-z=0.25. Different models can have different sampled k grids.
-
-The [statistics](statistics.json), [audit](audit.json), and
-[provenance](provenance.json) retain the results, verification outcomes and
-original file fingerprints. Historical paths refer to the calculation workspace.
-The raw outputs, calculation scripts, native software and recovery snapshots
-are retained separately and are available for a detailed methods review.
-This repository contains the results for review; it is not a standalone
-installation for rerunning the calculation.
+The [statistics](statistics.json) contain the unrounded results, the
+[audit](audit.json) records the checks, and the [provenance file](provenance.json)
+contains the file fingerprints. The original raw runs, scripts and software
+are kept in the research workspace and can be supplied for a detailed review
+of the calculation.

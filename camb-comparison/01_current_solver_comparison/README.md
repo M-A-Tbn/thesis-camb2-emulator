@@ -1,41 +1,39 @@
-# Solver comparison — results and methods
+# Solver comparison — figures and data
 
-The current comparison covers three cosmologies at nine redshifts from z=0
-to z=2, using CAMB 1.6.6, CAMB 2.0.4 and CLASS 3.1.0 through CosmoBolognaLib.
+This folder contains the comparison of CAMB 1.6.6, CAMB 2.0.4 and CLASS 3.1.0
+for three cosmologies at nine redshifts from z=0 to z=2.
 
-## Reports and figures
+Start with the [report](results/Report.md) for the setup and results, or open
+the [redshift comparison](results/figures/01_solver_agreement_by_redshift.png)
+for the main finding.
 
-- [Scientific report](results/Report.md): purpose, inputs, method, results and limits.
-- [Agreement across redshifts](results/figures/01_solver_agreement_by_redshift.png):
-  maximum and RMS disagreement with CLASS in each model.
-- Actual power spectra at all nine redshifts:
-  [flat LambdaCDM](results/figures/02_matter_power_flat_lcdm.png),
-  [curved LambdaCDM](results/figures/03_matter_power_curved_lcdm.png), and
-  [evolving dark energy](results/figures/04_matter_power_evolving_dark_energy.png).
-- [Figure index](results/figures/README.md): PNG and scalable SVG versions.
-- [Source audit](../02_shared_inputs_and_z0_reference/Source%20audit.md):
-  documented thesis settings and adopted assumptions.
+## Figures
 
-## Numerical records
+The power spectra are shown separately for
+[flat LambdaCDM](results/figures/02_matter_power_flat_lcdm.png),
+[curved LambdaCDM](results/figures/03_matter_power_curved_lcdm.png), and
+[evolving dark energy](results/figures/04_matter_power_evolving_dark_energy.png).
+Each figure has nine panels, one per redshift. The
+[figure index](results/figures/README.md) lists the PNG and SVG versions.
 
-The [statistics](results/statistics.json) give unrounded maxima, their signs and
-locations, and RMS values. The [audit](results/audit.json) records the checks
-performed during the calculation. The [provenance record](results/provenance.json)
-identifies the saved files by SHA-256 fingerprints.
+## Inputs and numerical results
 
-Comparison arrays are saved as NumPy NPZ files for
+The [input notes](../02_shared_inputs_and_z0_reference/Source%20audit.md) explain
+which settings were taken from Emmanuel's thesis and where choices were needed.
+The values are recorded in the [shared configuration](../02_shared_inputs_and_z0_reference/config.json)
+and [model configuration](config.json).
+
+The [statistics file](results/statistics.json) gives the unrounded differences,
+their signs and locations, and RMS values. The [audit](results/audit.json)
+records the checks made during the calculation. File fingerprints are saved
+in the [provenance record](results/provenance.json).
+
+The comparison arrays are available as NumPy NPZ files for the
 [flat](results/flat.npz), [curved](results/curved.npz), and
-[evolving-dark-energy](results/evolving_de.npz) models. Each contains the
-redshift list and the matched spectra at native CLASS output points. The
-original keys refer to z=0; suffixes such as `_z025` identify z=0.25.
+[evolving-dark-energy](results/evolving_de.npz) models. Keys without a suffix
+refer to z=0; a suffix such as `_z025` means z=0.25. Each file also contains
+the redshift list and matched spectra at CLASS's original output points.
 
-The [model configuration](config.json) gives the curvature, dark-energy and
-redshift choices. The [shared configuration](../02_shared_inputs_and_z0_reference/config.json)
-gives the common physical inputs. Historical paths in these records identify
-the original research workspace.
-
-Original raw runs, calculation scripts, software environments and recoverable
-backups remain in that workspace. They support the recorded audit but are not
-included in this results repository. The published files allow review of the
-reported results; rerunning the full calculation requires those additional
-materials.
+The original raw runs, calculation code and software are kept in the research
+workspace. They can be supplied for a closer review or a rerun; the historical
+paths in the saved records refer to that workspace.
