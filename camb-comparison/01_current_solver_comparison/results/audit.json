@@ -1,0 +1,994 @@
+{
+  "all_assertions_passed": true,
+  "model_redshift_combinations": 27,
+  "new_solver_runs": 216,
+  "existing_z0_solver_runs": 27,
+  "z0_regression_passed": true,
+  "models": {
+    "flat": {
+      "z000": {
+        "all_assertions_passed": true,
+        "preserved_z0": true,
+        "redshift": 0,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 1.38311584407802e-10,
+        "reconstruction_guard_percent": 1.9999999999999997e-09,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {},
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false,
+        "z0_arrays_and_statistics_unchanged": true
+      },
+      "z025": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.25,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 7.733821272282171e-06,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z050": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.5,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 4.554386667798838e-06,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z075": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.75,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 1.5037860401356795e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z100": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 1.319468931892942e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z125": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.25,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 0.00010699781345380188,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z150": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.5,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 0.00013466533297368244,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z175": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.75,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 0.0001100948528343082,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z200": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 2,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 6.68560386607453e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6860695988673271
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4742373988241297e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      }
+    },
+    "curved": {
+      "z000": {
+        "all_assertions_passed": true,
+        "preserved_z0": true,
+        "redshift": 0,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 1.7453816170132086e-10,
+        "reconstruction_guard_percent": 1.9999999999999997e-09,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false,
+        "z0_arrays_and_statistics_unchanged": true
+      },
+      "z025": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.25,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 6.952738051957397e-06,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z050": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.5,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 5.394688251669777e-06,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z075": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.75,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 1.375751133014802e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z100": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 1.3162687406698126e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z125": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.25,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 6.74970405567521e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z150": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.5,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 0.00019183971917691167,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z175": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.75,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 0.00010663929965737395,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z200": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 2,
+        "native_total": 112,
+        "comparison_points": 101,
+        "focus_points": 62,
+        "class_power_reconstruction_max_percent": 6.449034732902703e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709872579e-05,
+          "b": 0.049367809931108515,
+          "cdm": 0.2644704103451676,
+          "ur": 3.7678369153044275e-05,
+          "de": 0.6760695988674775
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          },
+          "2.0.4": {
+            "baryon": 2.2343238370581275e-15,
+            "cdm": 6.855627177060342e-14,
+            "photon": -8.712130155345181e-11,
+            "neutrino": -6.02282330115062e-11,
+            "de": 1.4727330466257627e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      }
+    },
+    "evolving_de": {
+      "z000": {
+        "all_assertions_passed": true,
+        "preserved_z0": true,
+        "redshift": 0,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 1.4015455462867976e-10,
+        "reconstruction_guard_percent": 1.9999999999999997e-09,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false,
+        "z0_arrays_and_statistics_unchanged": true
+      },
+      "z025": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.25,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 7.838912430280232e-06,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z050": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.5,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 4.9925914069604005e-06,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z075": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 0.75,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 1.4340534004730898e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z100": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 1.2925808423602803e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z125": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.25,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 7.05664189970534e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z150": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.5,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 0.000138011691674933,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z175": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 1.75,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 0.00010676467969705783,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      },
+      "z200": {
+        "all_assertions_passed": true,
+        "preserved_z0": false,
+        "redshift": 2,
+        "native_total": 117,
+        "comparison_points": 101,
+        "focus_points": 63,
+        "class_power_reconstruction_max_percent": 6.579869806788707e-05,
+        "reconstruction_guard_percent": 0.001,
+        "background_omega": {
+          "g": 5.450248709888773e-05,
+          "b": 0.04936780993125519,
+          "cdm": 0.26447041034595337,
+          "ur": 3.7678369153156225e-05,
+          "de": 0.6860695988665925
+        },
+        "camb_minus_class_background": {
+          "1.6.6": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          },
+          "2.0.4": {
+            "baryon": -1.4444001550373287e-13,
+            "cdm": -7.172040739078511e-13,
+            "photon": -8.71214634925988e-11,
+            "neutrino": -6.022834496215677e-11,
+            "de": 1.4815837445780744e-10
+          }
+        },
+        "repeats_identical": true,
+        "extra_class_k_interpolation": false
+      }
+    }
+  },
+  "recorded_file_locations": {
+    "/Users/ali/Desktop/thesis/camb-comparison/02_shared_inputs_and_z0_reference/run.py": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/.cleanup-backup-2026-10-26/emmanuel-baseline-2026-10-22/run.py",
+      "sha256": "ab41e651ca971a934bed99ddcb3ed150d0142cc4755ace61319cad273da51cd5"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/cbl-setup/CosmoBolognaLib/libCBL.dylib": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/archive/pre-nine-redshifts-2026-10-26/recorded-runtime/libCBL.dylib",
+      "sha256": "963b3df50fa482e567daad9ebdff1449ea914f3413da300a40d8604abd62e245"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/cbl-setup/CosmoBolognaLib/External/CLASS/class": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/archive/pre-nine-redshifts-2026-10-26/recorded-runtime/class",
+      "sha256": "80d6cede0f34e6a8f0e6e92f83f997787ae27d7ec9586758a2fa387d464a51b7"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/cbl-setup/CosmoBolognaLib/Cosmology/Lib/PkXi.cpp": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/.cbl-setup/CosmoBolognaLib/Cosmology/Lib/PkXi.cpp",
+      "sha256": "2ab9f3f9ce53601a82b5a2df4b165791ca09b75fb219fc14e24466f5ffb30509"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/cbl-setup/CosmoBolognaLib/External/CLASS/source/perturbations.c": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/.cbl-setup/CosmoBolognaLib/External/CLASS/source/perturbations.c",
+      "sha256": "42decbe635b168fbf11bf5e46a23e9516b6af0fe03254f26105a9aa5aabaa640"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/.venv-camb166-pilot/lib/python3.14/site-packages/camb/camblib.so": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/.venv-camb166-pilot/lib/python3.14/site-packages/camb/camblib.so",
+      "sha256": "77655eeaf5cc635f2d59f5dc4dafb9631837dd565caafd74446689fac920a30a"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/.venv-camb2/lib/python3.14/site-packages/camb/camblib.so": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/.venv-camb2/lib/python3.14/site-packages/camb/camblib.so",
+      "sha256": "8a1b55878858ad4161ce1997ee768969c76b8f5fb30c8804bc261210ac50555d"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/01_current_solver_comparison/run.py": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/archive/pre-nine-redshifts-2026-10-26/recorded-runtime/run.py",
+      "sha256": "e908090a1eb3a6f83be639c037f206f8bfad4f9431fc5d79058a7427a2be1eab"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/emmanuel-three-models-2026-10-22/config.json": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/archive/folder-names-before-2026-10-27/camb-comparison/emmanuel-three-models-2026-10-22/config.json",
+      "sha256": "fe36f7b17919473d5308489c95741171dd91b14130d9eb3bdf9931cf77b1e831"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/emmanuel-baseline-2026-10-22/config.json": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/02_shared_inputs_and_z0_reference/config.json",
+      "sha256": "d0a4ba7b2e3e94355bad805275fd6b146ddf629108e41f00fce4c1e75e3745d6"
+    },
+    "/Users/ali/Desktop/thesis/camb-comparison/archive/pre-nine-redshifts-2026-10-26/emmanuel-three-models-2026-10-22/run.py": {
+      "verified_path": "/Users/ali/Desktop/thesis/camb-comparison/archive/pre-nine-redshifts-2026-10-26/emmanuel-three-models-2026-10-22/run.py",
+      "sha256": "f4a5c28ee6b8badd418c0d9e3b1c56d6b3c2f04657828dc3fa095a0291bd38c4"
+    }
+  }
+}

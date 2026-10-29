@@ -1,0 +1,33 @@
+# This repository publishes reports and results for research review.
+# All other workspace material remains local.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/meetings/
+!/camb-comparison/
+
+/meetings/*
+!/meetings/2026-10-29.md
+
+/camb-comparison/*
+!/camb-comparison/01_current_solver_comparison/
+!/camb-comparison/02_shared_inputs_and_z0_reference/
+
+/camb-comparison/01_current_solver_comparison/*
+!/camb-comparison/01_current_solver_comparison/README.md
+!/camb-comparison/01_current_solver_comparison/config.json
+!/camb-comparison/01_current_solver_comparison/results/
+
+/camb-comparison/02_shared_inputs_and_z0_reference/*
+!/camb-comparison/02_shared_inputs_and_z0_reference/config.json
+!/camb-comparison/02_shared_inputs_and_z0_reference/Source audit.md
+
+# Local caches and account configuration are never published.
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.pem
+*.key

@@ -1,0 +1,29 @@
+{
+  "label": "Thesis-informed flat baseline, not an exact reproduction",
+  "H0": 67.36,
+  "ombh2": 0.0224,
+  "omch2": 0.120,
+  "As": 2.1e-9,
+  "ns": 0.9649,
+  "tau": 0.0544,
+  "TCMB": 2.7255,
+  "nnu": 3.044,
+  "YHe": 0.245,
+  "pivot": 0.05,
+  "mnu": 0,
+  "omk": 0,
+  "w": -1,
+  "wa": 0,
+  "z": 0,
+  "k_min": 0.0001,
+  "k_max": 1.0,
+  "transfer_kmax": 2.0,
+  "repeats": 3,
+  "provenance": {
+    "Table 4.1": ["H0/100 = 0.6736", "As", "ns", "tau", "zero massive-neutrino density", "omk", "w", "wa", "z"],
+    "Section 1.3.1 rounded values, not confirmed Figure 4.3 inputs": ["ombh2", "omch2"],
+    "Our explicit choices retained from earlier comparison": ["TCMB", "nnu", "YHe", "pivot", "k_min", "k_max", "transfer_kmax"],
+    "radiation": "Compute from TCMB and Neff in each solver; flat closure. Do not insert Table 4.1 Omega_gamma separately.",
+    "solver_settings": "Native precision and native recombination; CAMB set_matter_power defaults; no boosts or sigma8 normalization."
+  }
+}
