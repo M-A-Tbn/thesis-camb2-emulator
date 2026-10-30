@@ -284,16 +284,8 @@ The main result should be read within the following limits:
   fair runtime comparison remain outside this experiment. The cause of every
   feature in the differences has not yet been identified.
 
-## Saved data
+## Calculation records
 
-The comparison arrays are available for the [flat](flat.npz),
-[curved](curved.npz), and [evolving-dark-energy](evolving_de.npz) models.
-They contain the redshifts and spectra at matched CLASS points. Keys without
-a redshift suffix refer to z=0; for example, k_z025 and class_z025 refer to
-z=0.25.
-
-The [statistics](statistics.json) contain the unrounded results, the
-[audit](audit.json) records the checks, and the [provenance file](provenance.json)
-contains the file fingerprints. The original raw runs, scripts and software
-are kept in the research workspace and can be supplied for a detailed review
-of the calculation.
+The numerical data, unrounded statistics and detailed checks are kept in the
+local research workspace, together with the raw runs, scripts and SVG figures.
+The tables and PNG plots above are the results shared here for discussion.

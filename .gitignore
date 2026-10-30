@@ -1,4 +1,4 @@
-# This repository publishes reports and results for research review.
+# This repository publishes written reports and PNG plots for research review.
 # All other workspace material remains local.
 /*
 !/.gitignore
@@ -16,12 +16,23 @@
 
 /camb-comparison/01_current_solver_comparison/*
 !/camb-comparison/01_current_solver_comparison/Solver comparison guide.md
-!/camb-comparison/01_current_solver_comparison/config.json
 !/camb-comparison/01_current_solver_comparison/results/
 
+/camb-comparison/01_current_solver_comparison/results/*
+!/camb-comparison/01_current_solver_comparison/results/Report.md
+!/camb-comparison/01_current_solver_comparison/results/figures/
+
+/camb-comparison/01_current_solver_comparison/results/figures/*
+!/camb-comparison/01_current_solver_comparison/results/figures/Figure index.md
+!/camb-comparison/01_current_solver_comparison/results/figures/*.png
+
 /camb-comparison/02_shared_inputs_and_z0_reference/*
-!/camb-comparison/02_shared_inputs_and_z0_reference/config.json
 !/camb-comparison/02_shared_inputs_and_z0_reference/Source audit.md
+
+# Numerical files and vector originals stay in the local research workspace.
+*.npz
+*.json
+*.svg
 
 # Local caches and account configuration are never published.
 __pycache__/

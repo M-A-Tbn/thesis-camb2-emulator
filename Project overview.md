@@ -4,7 +4,7 @@ I'm working on reproducing Emmanuel's matter power-spectrum emulator with
 CAMB2. Before starting that stage, I've been comparing CAMB 1.6.6, CAMB 2.0.4
 and CLASS 3.1.0 to see how closely their predictions agree.
 
-This repository brings together the results and weekly updates for discussion.
+This repository brings together the reports and plots for our weekly discussions.
 It was last updated on **30 October 2026**.
 
 ## This week's result
@@ -30,7 +30,7 @@ A numerical convergence test is also still needed.
 - [The input notes](camb-comparison/02_shared_inputs_and_z0_reference/Source%20audit.md)
   explain which settings come from Emmanuel's thesis and which I had to choose.
 - [The result index](camb-comparison/01_current_solver_comparison/Solver%20comparison%20guide.md)
-  links the figures and numerical files.
+  links the plots and tables.
 
 ## Next step
 
@@ -40,5 +40,6 @@ training. Access to those files and the scope of that first test are the main
 points I'd like to discuss next.
 
 Feedback can be added in [Issues](https://github.com/M-A-Tbn/thesis-camb2-emulator/issues)
-or discussed with the weekly update. The original runs, code and installation
-records are kept separately and can be supplied if needed.
+or discussed with the weekly update. The numerical data, original runs, code
+and SVG figures are kept locally. A separate repository for the full project
+is planned for later.
