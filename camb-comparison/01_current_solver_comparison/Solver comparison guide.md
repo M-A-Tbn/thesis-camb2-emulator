@@ -14,7 +14,7 @@ The power spectra are shown separately for
 [curved LambdaCDM](results/figures/03_matter_power_curved_lcdm.png), and
 [evolving dark energy](results/figures/04_matter_power_evolving_dark_energy.png).
 Each figure has nine panels, one per redshift. The
-[figure index](results/figures/README.md) lists the PNG and SVG versions.
+[figure index](results/figures/Figure%20index.md) lists the PNG and SVG versions.
 
 ## Inputs and numerical results
 

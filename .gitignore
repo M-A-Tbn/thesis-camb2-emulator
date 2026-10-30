@@ -3,7 +3,7 @@
 /*
 !/.gitignore
 !/.gitattributes
-!/README.md
+!/Project overview.md
 !/meetings/
 !/camb-comparison/
 
@@ -15,7 +15,7 @@
 !/camb-comparison/02_shared_inputs_and_z0_reference/
 
 /camb-comparison/01_current_solver_comparison/*
-!/camb-comparison/01_current_solver_comparison/README.md
+!/camb-comparison/01_current_solver_comparison/Solver comparison guide.md
 !/camb-comparison/01_current_solver_comparison/config.json
 !/camb-comparison/01_current_solver_comparison/results/
 

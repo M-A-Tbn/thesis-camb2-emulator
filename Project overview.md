@@ -5,7 +5,7 @@ CAMB2. Before starting that stage, I've been comparing CAMB 1.6.6, CAMB 2.0.4
 and CLASS 3.1.0 to see how closely their predictions agree.
 
 This repository brings together the results and weekly updates for discussion.
-It was last updated on **29 October 2026**.
+It was last updated on **30 October 2026**.
 
 ## This week's result
 
@@ -29,7 +29,7 @@ A numerical convergence test is also still needed.
   explains the setup, plots and limitations.
 - [The input notes](camb-comparison/02_shared_inputs_and_z0_reference/Source%20audit.md)
   explain which settings come from Emmanuel's thesis and which I had to choose.
-- [The result index](camb-comparison/01_current_solver_comparison/README.md)
+- [The result index](camb-comparison/01_current_solver_comparison/Solver%20comparison%20guide.md)
   links the figures and numerical files.
 
 ## Next step

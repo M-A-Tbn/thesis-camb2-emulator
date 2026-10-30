@@ -773,9 +773,9 @@
     "results/figures/03_matter_power_curved_lcdm.svg": "807ae6d6d2f4a647126d3de7dd48f3be7b849ffb514f73d1e21b77e71536af4b",
     "results/figures/04_matter_power_evolving_dark_energy.png": "3b335ca97e213c330e5250037fb8d8a6301ac9057e2bd0f91fe7319c48424454",
     "results/figures/04_matter_power_evolving_dark_energy.svg": "d617a83b5b748597f1e1eadbd8091b6e7c765d213b78029a0d26b6eb5a35fd02",
-    "results/figures/README.md": "cb373153caf799995efc530d4f844e5ebeab06acc2c899e468fc5f616fa054b5",
     "results/flat.npz": "80bd2c17e5af358470c039c6b3797e0e639aebbb90ef2d34c30d7dd814895319",
-    "results/statistics.json": "e1d7d5d0bb6eb84860e62b84388bbdb2c6d7476b6ed9a9344d67ede7eb460b28"
+    "results/statistics.json": "e1d7d5d0bb6eb84860e62b84388bbdb2c6d7476b6ed9a9344d67ede7eb460b28",
+    "results/figures/Figure index.md": "cb373153caf799995efc530d4f844e5ebeab06acc2c899e468fc5f616fa054b5"
   },
   "report_revision": {
     "date": "2026-10-29",
@@ -790,6 +790,17 @@
         "results/figures/README.md": "c5d15148a0c620de0ffef4ddd16ddc3970640af06d91c9912700b0b99c0ab9e5"
       },
       "reason": "Revised the report and figure guide for a more direct, natural writing style. Numerical tables, arrays, figures and scientific checks are unchanged."
+    }
+  ],
+  "path_revisions": [
+    {
+      "date": "2026-10-30",
+      "renames": {
+        "README.md": "Project overview.md",
+        "camb-comparison/01_current_solver_comparison/README.md": "camb-comparison/01_current_solver_comparison/Solver comparison guide.md",
+        "camb-comparison/01_current_solver_comparison/results/figures/README.md": "camb-comparison/01_current_solver_comparison/results/figures/Figure index.md"
+      },
+      "reason": "Use descriptive document names and update navigation. The figure index contents and all numerical results are unchanged."
     }
   ]
 }
